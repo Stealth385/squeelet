@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1540844729 source:e:\=development=\cb-projects\squeelet\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+	"repl.h"
+	"getline.h"
+
+1540844389 source:e:\=development=\cb-projects\squeelet\src\getline.c
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+	<stdint.h>
+
+1540844405 e:\=development=\cb-projects\squeelet\src\getline.h
+
+1540844758 e:\=development=\cb-projects\squeelet\src\repl.h
+
+1540844803 source:e:\=development=\cb-projects\squeelet\src\repl.c
+	<stdio.h>
+	<stdlib.h>
+	"getline.h"
+	"repl.h"
+
