@@ -4,7 +4,8 @@
 #include <string.h>
 
 #include "repl.h"
-#include "getline.h"
+#include "meta_command.h"
+#include "prepared_statement.h"
 
 int main(int argc, char* argv[])
 {
@@ -14,15 +15,30 @@ int main(int argc, char* argv[])
         REPL_PrintPrompt();
         REPL_ReadInput(inputBuffer);
 
-        if (!strcmp(inputBuffer->buffer, ".exit"))
+        if (inputBuffer->buffer[0] == '.')
         {
-            exit(EXIT_SUCCESS);
+            switch (MetaCommand_Execute(inputBuffer))
+            {
+            case (META_COMMAND_SUCCESS):
+                continue;
+            case (META_COMMAND_UNRECOGNIZED_COMMAND):
+                printf("Unrecognized command '%s'.\r\n", inputBuffer->buffer);
+                continue;
+            }
         }
-        else
-        {
-            printf("Unrecognized command '%s'.\r\n", inputBuffer->buffer);
-        }
-    }
 
+        Statement statement;
+        switch(Statement_Prepare(inputBuffer, &statement))
+        {
+        case (PREPARE_SUCCESS):
+            break;
+        case (PREPARE_UNRECOGNIZED_STATEMENT):
+            printf("Unrecognized keyword at start of '%s'.\r\n", inputBuffer->buffer);
+            continue;
+        }
+
+        Statement_Execute(&statement);
+        printf("Executed.\r\n");
+    }
     return 0;
 }
