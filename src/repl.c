@@ -3,6 +3,7 @@
 
 #include "getline.h"
 #include "repl.h"
+
 REPL_InputBuffer* REPL_NewInputBuffer(void)
 {
     REPL_InputBuffer *pInputBuffer = malloc(sizeof(REPL_InputBuffer));

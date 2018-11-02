@@ -1,3 +1,8 @@
+#ifndef _REPL_H_
+#define _REPL_H_
+
+#include <sys/types.h>
+#include <stddef.h>
 
 typedef struct REPL_InputBuffer_t
 {
@@ -9,3 +14,5 @@ typedef struct REPL_InputBuffer_t
 REPL_InputBuffer* REPL_NewInputBuffer(void);
 void REPL_PrintPrompt(void);
 void REPL_ReadInput(REPL_InputBuffer *pInputBuffer);
+
+#endif // _REPL_H_
