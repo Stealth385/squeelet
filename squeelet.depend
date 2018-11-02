@@ -1,25 +1,44 @@
 # depslib dependency file v1.0
-1540844729 source:e:\=development=\cb-projects\squeelet\src\main.c
+1541161759 source:e:\=development=\cb-projects\squeelet\src\main.c
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>
 	<string.h>
 	"repl.h"
-	"getline.h"
+	"meta_command.h"
+	"prepared_statement.h"
 
-1540844389 source:e:\=development=\cb-projects\squeelet\src\getline.c
+1540919842 source:e:\=development=\cb-projects\squeelet\src\getline.c
 	<stdio.h>
 	<stdlib.h>
 	<errno.h>
 	<stdint.h>
 
-1540844405 e:\=development=\cb-projects\squeelet\src\getline.h
+1540921344 e:\=development=\cb-projects\squeelet\src\getline.h
 
-1540844758 e:\=development=\cb-projects\squeelet\src\repl.h
+1540921487 e:\=development=\cb-projects\squeelet\src\repl.h
+	<sys/types.h>
+	<stddef.h>
 
-1540844803 source:e:\=development=\cb-projects\squeelet\src\repl.c
+1540921211 source:e:\=development=\cb-projects\squeelet\src\repl.c
 	<stdio.h>
 	<stdlib.h>
 	"getline.h"
+	"repl.h"
+
+1541161852 source:e:\=development=\cb-projects\squeelet\src\meta_command.c
+	<stdlib.h>
+	<string.h>
+	"meta_command.h"
+
+1541161797 e:\=development=\cb-projects\squeelet\src\meta_command.h
+	"repl.h"
+
+1541161735 source:e:\=development=\cb-projects\squeelet\src\prepared_statement.c
+	<stdio.h>
+	<string.h>
+	"prepared_statement.h"
+
+1541161741 e:\=development=\cb-projects\squeelet\src\prepared_statement.h
 	"repl.h"
 

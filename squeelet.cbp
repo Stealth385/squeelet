@@ -31,9 +31,25 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="src/getline.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/getline.h" />
 		<Unit filename="src/main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src/meta_command.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/meta_command.h" />
+		<Unit filename="src/prepared_statement.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/prepared_statement.h" />
+		<Unit filename="src/repl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/repl.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
